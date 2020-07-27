@@ -14,7 +14,7 @@ colors:
 # Labels
 labels: &common
   'addition/feature':
-    color: &additions
+    color: &addition
     description: A request for a new feature.
   'environment/production':
     color: &environment
