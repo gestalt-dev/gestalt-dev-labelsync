@@ -14,64 +14,64 @@ colors:
 # Labels
 labels: &common
   'addition/feature':
-    color: &addition
+    color: *addition
     description: A request for a new feature.
   'environment/production':
-    color: &environment
+    color: *environment
     description: Found in production.
   'environment/staging':
-    color: &environment
+    color: *environment
     description: Found in staging.
   'environment/testing':
-    color: &environment
+    color: *environment
     description: Found in testing.
   'experience/copy':
-    color: &experience
+    color: *experience
     description: Involves a change to copy.
   'experience/design':
-    color: &experience
+    color: *experience
     description: Involves a change to design.
   'experience/ux':
-    color: &experience
+    color: *experience
     description: Involves a change to ux.
   'feedback/discussion':
-    color: &experience
+    color: *experience
     description: Discussion is required.
   'feedback/rfc':
-    color: &experience
+    color: *experience
     description: A request for comments was made.
   'feedback/question':
-    color: &experience
+    color: *experience
     description: A question was asked.
   'improvement/documentation':
-    color: &improvement
+    color: *improvement
     description: An improvement to documentation.
   'improvement/enhancement':
-    color: &improvement
+    color: *improvement
     description: An improvement to existing features.
   'improvement/optimization':
-    color: &improvement
+    color: *improvement
     description: An improvement to existing features.
   'inactive/duplicate':
-    color: &inactive
+    color: *inactive
     description: A duplicate of an existing issue.
   'inactive/invalid':
-    color: &inactive
+    color: *inactive
     description: A false positive.
   'inactive/wontfix':
-    color: &inactive
+    color: *inactive
     description: A legitimate issue that wonʼt be fixed.
   'mindless/chore':
-    color: &mindless
+    color: *mindless
     description: A chore.
   'pending/blocked':
-    color: &pending
+    color: *pending
     description: Another item must be addressed before this one can.
   'problem/bug':
-    color: &problem
+    color: *problem
     description: A reported bug.
   'problem/regression':
-    color: &problem
+    color: *problem
     description: A reported bug in functionality that used to work.
 
 # Repositories
