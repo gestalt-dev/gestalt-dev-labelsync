@@ -1,68 +1,88 @@
 # Colors
 colors:
-  area: &area "#FFD700"
-  kind: &kind "#3B5BDB"
-  status: &status "#F8F9FA"
-  bug: &bug "#EE0000"
-  priority: &priority "#F783AC"
-  scope: &scope "#27CF79"
-  team: &team'#FDF4E8'
-  release: &release "#A5D8ff"
-  process: &process' "#EB9100"
+  addition: &addition '#91CA55' # Brand new functionality.
+  experience: &experience '#FFC274' # Effects user’s comprehension, or overall enjoyment of the product.
+  environment: &environment '#FAD8C7' # Which server enviroment the item is relavant to.
+  feedback: &feedback '#CC317C' # Indicate further conversation is required.
+  improvement: &improvement '#5EBEFF' # Iterations on existing features or infrastructure.
+  inactive: &inactive '#D2DAE1' # No action needed or possible.
+  mindless: &mindless '#FEF2C0' # Items that are necessary, but less impactful.
+  pending: &pending '#FBCA04' # Indicate something is required before more action can be taken.
+  platform: &platform '#BFD4F2' # If the repository involves multiple platforms, specify which one the item is relevant to.
+  problem: &problem '#EE3F46' # Issues that make the product feel broken.
 
 # Labels
 labels: &common
-  "bug/0-needs-info":
-    color: &bug
-    description: More information is needed for reproduction.
-    siblings: ["kind/bug"]
-  "bug/1-repro-available":
-    color: &bug
-    description: A reproduction exists and needs to be confirmed.
-    siblings: ["kind/bug"]
-  "bug/2-confirmed":
-    color: &bug
-    description: We have confirmed that this is a bug.
-    siblings: ["kind/bug"]
-  "kind/bug":
-    color: &bug
-    description: A reported bug.
-    alias: ["bug"]
-  "kind/regression":
-    color: &kind
-    description: A reported bug in functionality that used to work before.
-  "kind/feature":
-    color: &kind
+  'addition/feature':
+    color: *addition
     description: A request for a new feature.
-    alias: ["enhancement"]
-  "kind/improvement":
-    color: &kind
-    description: An improvement to existing feature and code.
-  "kind/docs":
-    color: &kind
-    description: A documentation change is required.
-    alias: ["documentation"]
-  "kind/discussion":
-    color: &kind
+  'environment/production':
+    color: *environment
+    description: Found in production.
+  'environment/staging':
+    color: *environment
+    description: Found in staging.
+  'environment/testing':
+    color: *environment
+    description: Found in testing.
+  'experience/copy':
+    color: *experience
+    description: Involves a change to copy.
+  'experience/design':
+    color: *experience
+    description: Involves a change to design.
+  'experience/ux':
+    color: *experience
+    description: Involves a change to ux.
+  'feedback/discussion':
+    color: *feedback
     description: Discussion is required.
-  "kind/question":
-    color: &kind
-    description: Developer asked a question. No code changes required.
-    alias: ["question"]
+  'feedback/rfc':
+    color: *feedback
+    description: A request for comments was made.
+  'feedback/question':
+    color: *feedback
+    description: A question was asked.
+  'improvement/documentation':
+    color: *improvement
+    description: An improvement to documentation.
+  'improvement/enhancement':
+    color: *improvement
+    description: An improvement to existing features.
+  'improvement/optimization':
+    color: *improvement
+    description: An improvement to existing features.
+  'inactive/duplicate':
+    color: *inactive
+    description: A duplicate of an existing issue.
+  'inactive/invalid':
+    color: *inactive
+    description: A false positive.
+  'inactive/wontfix':
+    color: *inactive
+    description: A legitimate issue that wonʼt be fixed.
+  'mindless/chore':
+    color: *mindless
+    description: A chore.
+  'pending/blocked':
+    color: *pending
+    description: Another item must be addressed before this one can.
+  'problem/bug':
+    color: *problem
+    description: A reported bug.
+  'problem/regression':
+    color: *problem
+    description: A reported bug in functionality that used to work.
 
 # Repositories
 repos:
   configurator-backend:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: true
     labels:
-      {}
-      # <<: *common
-      # Add labels here.
+      <<: *common
   configurator-web:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: true
     labels:
-      {}
-      # <<: *common
-      # Add labels here.
+      <<: *common
