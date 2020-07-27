@@ -35,13 +35,13 @@ labels: &common
     color: *experience
     description: Involves a change to ux.
   'feedback/discussion':
-    color: *experience
+    color: *feedback
     description: Discussion is required.
   'feedback/rfc':
-    color: *experience
+    color: *feedback
     description: A request for comments was made.
   'feedback/question':
-    color: *experience
+    color: *feedback
     description: A question was asked.
   'improvement/documentation':
     color: *improvement
