@@ -61,6 +61,9 @@ labels: &common
   'inactive/wontfix':
     color: &inactive
     description: A legitimate issue that wonʼt be fixed.
+  'mindless/chore':
+    color: &mindless
+    description: A chore.
   'pending/blocked':
     color: &pending
     description: Another item must be addressed before this one can.
